@@ -126,12 +126,13 @@ console.log(order.status);
 console.log(order.orderUrgency());
 
 //num4
-function Employee (id, name, performanceMetrics, feedback) {
+class Employee{
+    constructor (id, name, performanceMetrics, feedback) {
         this.id = id;
         this.name = name;
         this.performanceMetrics = performanceMetrics;
         this.feedback = feedback;
-    }
+    }}
     Employee.prototype.averageScore = function() {
         const scores = Object.values(this.performanceMetrics);
         let sum = 0;

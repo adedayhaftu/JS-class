@@ -74,11 +74,9 @@ console.log(simulateAccess(feature,"guest"));
         }
     }
 
-const logs = [
-    { date: "2024-06-04", hoursWorked: 27 },
-    { date: "2024-05-02", hoursWorked: 23 }
-];
-const timeLog = new TimeLog("Adeday", { name: "JS-project", hourlyRate: 30 }, logs);
+const logs = [{ date: "2024-06-04", hoursWorked: 27 },
+     { date: "2024-05-02", hoursWorked: 23 }]
+const timeLog = new TimeLog("Adeday", { name: "JS-project", hourlyRate: 30 },logs);
 console.log(timeLog.totalEarnings()); 
 console.log(timeLog.filterByDateRange("2024-06-04", "2024-05-02").length); 
 console.log(timeLog.exceedsWeeklyHours());
@@ -120,12 +118,8 @@ console.log(timeLog.exceedsWeeklyHours());
 
 const order = new Order(
     { name: "Bereket", email: "bereket@gmail.com" },
-    [
-        { productName: "Mobile-Phone", quantity: 3, unitPrice: 1000 },
-        { productName: "ipad", quantity: 2, unitPrice: 1500 }
-    ],
-    "Pending"
-);
+    [{ productName: "Mobile-Phone", quantity: 3, unitPrice: 1000 },
+        { productName: "ipad", quantity: 2, unitPrice: 1500 } ],  "Pending");
 console.log(order.totalCost()); 
 order.updateStatus(true);
 console.log(order.status); 
@@ -165,12 +159,7 @@ function Employee (id, name, performanceMetrics, feedback) {
         return "No feedback";
     }
 
-const employee = new Employee(
-    1,
-    "Jenifer",
-    { communication: 8, efficiency: 7, reliability: 9 },
-    ["Good Job!"]
-);
+const employee = new Employee(1,"Jenifer",{ communication: 8, efficiency: 7, reliability: 9 },["Good Job!"]);
 console.log(employee.averageScore()); 
 console.log(employee.performanceLevel()); 
 console.log(employee.addFeedback("Good Job!")); 
@@ -210,9 +199,7 @@ console.log(employee.feedback);
         }
     }
 
-const course = new Course(
-    "JavaScript",
-    { name: "Jack", expertise: "coding" },
+const course = new Course( "JavaScript",{ name: "Jack", expertise: "coding" },
     [
         { name: "Semhal", completionStatus: true },
         { name: "Fana", completionStatus: false },
